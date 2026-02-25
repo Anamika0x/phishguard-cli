@@ -111,3 +111,4 @@ This tool is developed strictly for educational and cybersecurity awareness purp
 Do not use this project for malicious activities.
 
 ---
+Minor update for contribution test.
