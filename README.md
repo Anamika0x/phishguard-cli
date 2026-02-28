@@ -44,15 +44,18 @@ Example scan:
 Choose an option:
 1. Scan a website
 2. Phishing Awareness Demo
+
 Choice ➜ 1
 
 Enter Target URL ➜ https://google.com
 
 Scanning...
 
-+----------------------+------------------+
+
+### Scan Results
+
 | Parameter            | Result           |
-+----------------------+------------------+
+|----------------------|------------------|
 | SSL Secure           | ✔ Yes            |
 | Using IP             | No               |
 | WHOIS Registered     | Yes              |
@@ -63,7 +66,7 @@ Scanning...
 | WHOIS Risk Score     | 0                |
 | Structure Score      | 0                |
 | Numeric Trick Score  | 0                |
-+----------------------+------------------+
+
 
 FINAL VERDICT ➜ LOW RISK
 
