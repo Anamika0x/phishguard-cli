@@ -18,6 +18,15 @@ This project demonstrates how phishing detection logic can be automated using sy
 - Automated risk scoring system
 - Clean command-line interface
 
+## Enhanced Analysis Modules
+
+- URL pattern analysis (length, special characters, suspicious TLDs)
+- Domain structure analysis (subdomain abuse detection)
+- Numeric trick detection in domains
+- Registrar extraction from WHOIS data
+- Modular advanced weighted risk scoring
+- Risk breakdown transparency
+
 The tool provides a final verdict:
 
 - LOW RISK
@@ -45,14 +54,33 @@ Final Verdict: HIGH RISK
 
 ---
 
+
+## Enhanced versions may also display:
+
+- Registrar information  
+- URL pattern risk score  
+- SSL risk score  
+- WHOIS risk score  
+- Domain structure score  
+- Numeric trick score  
+- Risk breakdown summary  
+
+---
+
+
 ## Tech Stack
 
 - Python 3
-- Kali Linux
-- WHOIS
+- WHOIS (system tool)
 - Socket library
 - SSL module
 - Subprocess automation
+- Modular scanner architecture
+
+### Optional enhancements may use:
+
+- `rich` (for improved CLI output)
+- Additional scoring modules
 
 ---
 
@@ -65,9 +93,13 @@ Clone the repository:
 git clone https://github.com/Anamika0x/phishguard-cli.git
 cd phishguard-cli  
 ```
-Install required dependency:
+Install required dependency (Linux-based systems):
 
 sudo apt install whois  
+
+If additional Python modules are required:
+
+pip install -r requirements.txt
 
 ---
 
@@ -83,7 +115,7 @@ Example:
 
 Enter URL: https://google.com  
 
-The tool will scan the URL and display a calculated risk verdict.
+The tool will scan the URL and display a calculated risk verdict along with intermediate detection signals.
 
 ---
 
@@ -94,21 +126,41 @@ The tool will scan the URL and display a calculated risk verdict.
 3. Attempts SSL handshake verification  
 4. Checks whether the URL uses an IP address  
 5. Performs WHOIS lookup  
-6. Calculates a weighted risk score  
-7. Displays final verdict  
+6. Extracts domain age  
+7. Applies pattern-based and structural heuristics  
+8. Calculates a weighted risk score  
+9. Displays final verdict  
 
 The risk score increases if:
+
 - SSL is invalid  
 - The URL uses a raw IP  
 - Domain is unregistered  
-- Domain metadata is suspicious  
+- Domain is newly registered  
+- Suspicious URL patterns are detected  
+- Domain structure appears manipulated  
 
 ---
+
+## 🤝 Contribution
+
+Contributions are welcome.
+
+You can contribute by:
+
+- Improving detection logic
+- Enhancing scoring models
+- Refactoring modules
+- Improving documentation
+- Adding new security analysis techniques
+
+Please open an issue before submitting major changes.
 
 ## ⚠️ Disclaimer
 
 This tool is developed strictly for educational and cybersecurity awareness purposes only.  
 Do not use this project for malicious activities.
 
+The authors are not responsible for misuse of this software.
+
 ---
-Minor update for contribution test.
