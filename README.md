@@ -39,18 +39,35 @@ The tool provides a final verdict:
 
 Example scan:
 
-=== PhishGuard CLI ===
+⚡ PHISHGUARD CLI - ULTRA EDITION ⚡
 
-Enter URL (example: https://example.com): http://192.168.1.1
+Choose an option:
+1. Scan a website
+2. Phishing Awareness Demo
+Choice ➜ 1
+
+Enter Target URL ➜ https://google.com
 
 Scanning...
 
-SSL Secure: False  
-Using IP instead of domain: True  
-Domain registered (WHOIS): True  
-Domain Age: None years  
++----------------------+------------------+
+| Parameter            | Result           |
++----------------------+------------------+
+| SSL Secure           | ✔ Yes            |
+| Using IP             | No               |
+| WHOIS Registered     | Yes              |
+| Domain Age           | 28 years         |
+| Registrar            | MarkMonitor Inc. |
+| URL Pattern Score    | 0                |
+| SSL Risk Score       | 0                |
+| WHOIS Risk Score     | 0                |
+| Structure Score      | 0                |
+| Numeric Trick Score  | 0                |
++----------------------+------------------+
 
-Final Verdict: HIGH RISK  
+FINAL VERDICT ➜ LOW RISK
+
+> Output may vary depending on domain configuration, SSL status, and scoring parameters.
 
 ---
 
